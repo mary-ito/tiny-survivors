@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd2fnb01e47pw"]
+
+[ext_resource type="Texture2D" uid="uid://bu4j8ihok0llb" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/TNT/Red/TNT_Red.png" id="1_h8j4u"]
+[ext_resource type="Texture2D" uid="uid://cr3ab3100a2br" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_nkuhw"]
+[ext_resource type="Texture2D" uid="uid://s4e8rxmnm4no" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="3_3qq3q"]
+[ext_resource type="Texture2D" uid="uid://dkc2l7f2wdsoo" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="4_44vkt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TntRed" type="Sprite2D" parent="."]
+position = Vector2(1994, 298)
+texture = ExtResource("1_h8j4u")
+
+[node name="TorchRed" type="Sprite2D" parent="."]
+position = Vector2(1964, 1186)
+texture = ExtResource("2_nkuhw")
+
+[node name="WarriorPurple" type="Sprite2D" parent="."]
+position = Vector2(539, 725)
+texture = ExtResource("3_3qq3q")
+
+[node name="PawnRed" type="Sprite2D" parent="."]
+position = Vector2(2755, 432)
+texture = ExtResource("4_44vkt")

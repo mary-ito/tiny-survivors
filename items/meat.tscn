@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmhvrqfrtdfs"]
+
+[ext_resource type="Texture2D" uid="uid://di5j0sny6kid5" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="1_4b4un"]
+[ext_resource type="Script" path="res://items/life_regenerator.gd" id="2_lq3km"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjbo2"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iofa"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wk4u"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6j72"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0bp8"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urdia"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwuha"]
+atlas = ExtResource("1_4b4un")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alrtb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjbo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iofa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wk4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6j72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0bp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urdia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwuha")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgxl5"]
+radius = 32.0
+
+[node name="Meat" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_alrtb")
+autoplay = "default"
+frame = 6
+frame_progress = 0.385531
+offset = Vector2(2.08165e-12, -30)
+script = ExtResource("2_lq3km")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -20)
+shape = SubResource("CircleShape2D_lgxl5")
